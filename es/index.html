@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boneloom: Política de privacidad</title>
+<meta name="description" content="Política de privacidad de la app Boneloom para Android (com.boneloom.app).">
+<link rel="alternate" hreflang="en" href="https://boneloomstudio-svg.github.io/boneloomprivacy/">
+<link rel="alternate" hreflang="es" href="https://boneloomstudio-svg.github.io/boneloomprivacy/es/">
+<link rel="alternate" hreflang="ja" href="https://boneloomstudio-svg.github.io/boneloomprivacy/ja/">
+<style>
+  :root { --ink: #1d1d1f; --muted: #5f5f66; --line: #e3e3e8; --accent: #e8912a; --paper: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink: #ececef; --muted: #a3a3ab; --line: #34343a; --accent: #f0a040; --paper: #1c1c1f; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 4px; }
+  h1 span { color: var(--accent); }
+  .meta { color: var(--muted); margin: 0 0 12px; font-size: 0.95rem; }
+  .langs { margin: 0 0 32px; font-size: 0.95rem; color: var(--muted); }
+  h2 { font-size: 1.2rem; margin: 36px 0 8px; padding-top: 20px; border-top: 1px solid var(--line); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; }
+  a { color: var(--accent); }
+  .box { border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin: 16px 0; }
+  ul { padding-left: 1.2em; }
+</style>
+</head>
+<body>
+<main>
+
+<h1><span>Boneloom</span> Política de privacidad</h1>
+<p class="meta">App: Boneloom para Android (paquete <code>com.boneloom.app</code>)<br>
+Fecha de vigencia: 7 de octubre de 2026</p>
+<p class="langs"><a href="../">English</a> · <strong>Español</strong> · <a href="../ja/">日本語</a><br>
+Esta es una traducción. Si hay alguna diferencia, prevalece la <a href="../">versión en inglés</a>.</p>
+
+<div class="box">
+  <strong>En resumen.</strong> Tus dibujos y proyectos se quedan en tu teléfono. Boneloom no tiene
+  cuentas ni anuncios, y no usa un ID de publicidad. Para encontrar y corregir fallos y ver qué
+  partes de la app se usan, la app nos envía automáticamente información técnica a través de
+  Firebase Crashlytics y Firebase Analytics de Google. Si te suscribes, Google Play cobra el pago y
+  RevenueCat verifica la compra para activar premium; nunca vemos tu tarjeta.
+  Si lo aceptas cuando la app te lo pregunta por primera vez, Boneloom también envía información
+  anónima sobre cómo están hechos tus esqueletos (su forma y algunos números, nunca tu dibujo) para
+  encontrar y arreglar los esqueletos que se mueven mal; puedes decir que no, y cambiar de opinión
+  cuando quieras en Ajustes.
+  No vendemos nada de esto ni lo compartimos con nadie más.
+</div>
+
+<h2>Quiénes somos</h2>
+<p>Boneloom es una app de dibujo y animación 2D hecha por un desarrollador independiente en Panamá.
+En esta política, "nosotros" significa el desarrollador de Boneloom. Puedes escribirnos a
+<a href="mailto:boneloomstudio@gmail.com">boneloomstudio@gmail.com</a>.</p>
+
+<h2>Tus dibujos y proyectos se quedan en tu dispositivo</h2>
+<p>Todo lo que haces en Boneloom, incluidos dibujos, capas, fotogramas, esqueletos, animaciones,
+colores y ajustes, se guarda solo en tu teléfono, en el almacenamiento privado de la app. Nunca
+recibimos tus dibujos ni tus proyectos, y nunca se suben a nosotros. Lo único que puede salir de
+tu teléfono sobre un esqueleto se describe en
+<a href="#rig-diagnostics">Diagnóstico anónimo de esqueletos</a>, y solo si lo aceptas.</p>
+<ul>
+  <li><strong>Importar una imagen:</strong> Boneloom usa el selector de fotos de Android. La app
+    solo ve la imagen que eliges, y esa imagen se queda en tu dispositivo.</li>
+  <li><strong>Exportar:</strong> cuando guardas un PNG, GIF, video o archivo de proyecto, tú eliges
+    dónde se guarda. A dónde lo envíes después depende de ti.</li>
+  <li><strong>Mover la luz inclinando el teléfono:</strong> la app lee el sensor de movimiento de tu
+    teléfono mientras usas esta función. Las lecturas se usan en el momento y nunca se guardan ni
+    se envían a ningún lado.</li>
+  <li><strong>La copia de seguridad de tu teléfono:</strong> si tu teléfono hace copias de seguridad
+    de las apps en tu cuenta de Google, Android puede incluir los archivos de Boneloom. Esa copia
+    pertenece a tu cuenta de Google y nosotros no podemos verla.</li>
+</ul>
+
+<h2>Lo que la app recopila automáticamente</h2>
+<p>Boneloom usa dos servicios de Google, <strong>Firebase Crashlytics</strong> y <strong>Firebase
+Analytics</strong>. Recopilan lo siguiente automáticamente mientras usas la app:</p>
+<table>
+  <tr><th>Qué</th><th>Ejemplos</th><th>Para qué</th></tr>
+  <tr><td>Registros de fallos</td><td>Qué estaba haciendo la app cuando falló, y el error.</td><td>Para encontrar y corregir fallos.</td></tr>
+  <tr><td>Diagnóstico</td><td>Modelo del teléfono, versión de Android, versión de la app, información de memoria y rendimiento, idioma y país configurados.</td><td>Para entender fallos y problemas en distintos teléfonos.</td></tr>
+  <tr><td>Interacciones con la app</td><td>Qué pantallas se abren, cuánto dura una sesión y eventos básicos como abrir o actualizar la app.</td><td>Para saber qué partes de la app se usan y poder mejorarlas.</td></tr>
+  <tr><td>Identificadores del dispositivo</td><td>Un ID aleatorio que Firebase crea para esta instalación de la app.</td><td>Para distinguir los informes de una instalación de los de otra.</td></tr>
+</table>
+<p>Esta información <strong>no incluye</strong> tu nombre, correo electrónico, contactos,
+ubicación precisa, fotos ni nada de lo que dibujas. No se usa para identificarte personalmente.
+(Esto se refiere a Firebase. El diagnóstico de esqueletos, abajo, es aparte y solo ocurre si lo
+aceptas.)</p>
+
+<h2 id="rig-diagnostics">Diagnóstico anónimo de esqueletos (solo si lo aceptas)</h2>
+<p>La primera vez que abres Boneloom, te pregunta si aceptas enviar información anónima sobre cómo
+están hechos los esqueletos. Si eliges <strong>Rechazar</strong>, nada de lo que se describe aquí
+se recopila, guarda ni envía jamás. Puedes cambiar tu respuesta cuando quieras en
+<strong>Ajustes</strong>; al desactivarlo también se borra todo lo que estuviera esperando en tu
+teléfono para enviarse.</p>
+<p>Si eliges <strong>Aceptar</strong>, cuando sales de la pantalla del esqueleto, la app revisa
+cómo se mueve ese esqueleto: si un hueso tira de partes que no debería, si la malla se rompe, si
+encontró la cabeza. Envía un informe cuando algo se ve mal, y más o menos uno de cada cinco
+esqueletos que se ven bien, para saber también cómo es uno bueno. El mismo esqueleto sin cambios
+nunca se envía dos veces, y un teléfono envía como máximo 20 informes al día. Un informe
+contiene:</p>
+<table>
+  <tr><th>Qué</th><th>Detalles</th></tr>
+  <tr><td>Números sobre el esqueleto</td><td>Cuántos huesos y puntos de malla tiene, y mediciones de cómo se mueve el dibujo cuando gira cada hueso.</td></tr>
+  <tr><td>El esqueleto en sí</td><td>Dónde están los huesos, los puntos de la malla y qué huesos los sostienen.</td></tr>
+  <tr><td>Un contorno aproximado</td><td>Una silueta en blanco y negro del dibujo, de 160 cuadros de ancho como máximo, sin color y sin detalle.</td></tr>
+  <tr><td>Lo que se hizo en la pantalla del esqueleto</td><td>Solo cantidades: por ejemplo cuántos huesos se agregaron o borraron, cuántas veces se deshizo después de los huesos automáticos, trazos de pincel, exportaciones y cuánto tiempo estuvo abierta la pantalla.</td></tr>
+  <tr><td>Tamaños y versiones</td><td>El tamaño del lienzo, la versión de la app y la versión de Android.</td></tr>
+</table>
+<p><strong>Nunca envía</strong> tu dibujo, sus colores ni sus píxeles, nada de lo que escribiste
+(nombres de dibujos, esqueletos o huesos), tu cuenta, un ID del dispositivo o de publicidad, ni tu
+ubicación.</p>
+<p>Los informes no están vinculados a ti, así que no se pueden rastrear hasta ti. Esto también
+significa que no podemos encontrar y borrar los informes de una persona a pedido; decir que no, o
+desactivarlo en Ajustes, impide que se envíe nada más. Para evitar que alguien sature el servicio,
+el servidor guarda brevemente una forma codificada e irreversible (hash) de la dirección de red de la que llegó un
+informe, separada de los informes, y la borra después de un día aproximadamente.</p>
+<p>Se usa solo para encontrar y arreglar esqueletos que se mueven mal. Lo guarda
+<strong>Supabase</strong>, un servicio de base de datos que actúa en nuestro nombre, y nunca se
+vende ni se comparte.</p>
+
+<h2>Suscripciones y compras</h2>
+<p>Boneloom se descarga gratis. Premium es una suscripción opcional (mensual, o anual con una
+prueba gratis) que se compra a través de <strong>Google Play</strong>.</p>
+<ul>
+  <li><strong>Pago:</strong> Google Play cobra el pago. Los datos de tu tarjeta u otro medio de pago
+    van a Google, nunca a nosotros.</li>
+  <li><strong>RevenueCat:</strong> usamos RevenueCat, un servicio de suscripciones, para verificar
+    las compras con Google Play e indicarle a la app si premium está activo. RevenueCat recibe los
+    datos de la compra (qué plan, cuándo se compró o renovó, el precio y la moneda, el país de la
+    tienda y el token de compra de Google), un ID anónimo que crea para esta instalación de la app e
+    información básica del dispositivo y de la app (versión de Android, versión de la app). No
+    recibe tu nombre, tu correo electrónico ni nada de lo que dibujas.</li>
+  <li><strong>Para qué:</strong> para activar premium, restaurarlo en un teléfono nuevo y saber
+    cuántas personas se suscriben. No se usa para publicidad.</li>
+  <li><strong>Cancelar:</strong> puedes cancelar cuando quieras en Google Play, en Pagos y
+    suscripciones. Si premium termina, no se borra nada de lo que hiciste.</li>
+</ul>
+
+<h2>Si nos escribes</h2>
+<p>El botón de comentarios de la app abre tu propia app de correo con un mensaje para nosotros. Si
+lo envías, recibimos tu dirección de correo, lo que escribes y los detalles que la app agrega
+debajo de la línea: la versión de la app, tu versión de Android y el modelo de tu teléfono. Lo
+usamos solo para responderte y mejorar Boneloom, y puedes borrar esas líneas antes de enviarlo.</p>
+
+<h2>Lo que no hacemos</h2>
+<ul>
+  <li><strong>Sin cuentas.</strong> No hay registro ni inicio de sesión.</li>
+  <li><strong>Sin anuncios.</strong> Boneloom no muestra publicidad.</li>
+  <li><strong>Sin ID de publicidad.</strong> La app no recopila ni usa el ID de publicidad de tu
+    dispositivo, y la personalización de anuncios está desactivada.</li>
+  <li><strong>No vendemos ni compartimos.</strong> No vendemos tu información ni la compartimos con
+    terceros. Google (Crashlytics, Analytics y la facturación de Google Play), RevenueCat
+    (suscripciones) y Supabase (diagnóstico de esqueletos, solo si lo aceptas) trabajan para
+    nosotros como proveedores de servicios y manejan esta información en nuestro nombre.</li>
+</ul>
+
+<h2>Seguridad</h2>
+<p>Todo lo que se envía a Firebase, RevenueCat y Supabase va <strong>cifrado en tránsito</strong>
+(HTTPS), y Supabase además lo guarda cifrado. Tus dibujos y proyectos se guardan en el
+almacenamiento privado de la app, que otras apps de tu teléfono no pueden leer.</p>
+
+<h2>Cuánto tiempo se guarda</h2>
+<p>Firebase Crashlytics guarda los informes de fallos durante 90 días. La información de Analytics
+se guarda según la configuración de retención de Firebase Analytics y luego se borra
+automáticamente. RevenueCat y Google guardan los registros de compra mientras una suscripción los
+necesite y el tiempo que exijan las normas fiscales y contables.
+El diagnóstico de esqueletos se guarda durante 12 meses y luego se borra automáticamente, y todo
+se borra cuando se retire esta función; las direcciones de red codificadas (hash) que se usan contra la
+saturación se borran después de un día aproximadamente.
+Tus dibujos se quedan en tu teléfono hasta que los borres o desinstales la app.</p>
+
+<h2>Tus opciones</h2>
+<ul>
+  <li><strong>Diagnóstico de esqueletos:</strong> activa o desactiva <strong>Ayudar a arreglar
+    esqueletos</strong> en los Ajustes de la app cuando quieras. Desactivado, no se envía nada más
+    y se borra lo que estuviera esperando en tu teléfono.</li>
+  <li><strong>Desinstalar Boneloom</strong> detiene toda la recopilación y borra los datos de la
+    app de tu teléfono, incluidos tus dibujos. Exporta primero lo que quieras conservar.</li>
+  <li><strong>Borrar el almacenamiento de la app</strong> en los ajustes de Android restablece el ID
+    aleatorio de la app, y también borra tus dibujos.</li>
+  <li><strong>Preguntas o solicitudes</strong> sobre tu información: escríbenos a la dirección de
+    arriba y te ayudaremos. Como no hay cuentas, no sabemos quién eres a menos que nos lo digas.</li>
+</ul>
+
+<h2>Niños</h2>
+<p>Boneloom no está dirigida a menores de 13 años, y no recopilamos a sabiendas información
+personal de niños. La app recopila la misma información técnica de todas las personas, como se
+describe arriba. Si crees que un niño nos contactó con información personal, escríbenos y la
+borraremos.</p>
+
+<h2>Cambios en esta política</h2>
+<p>Si Boneloom empieza a recopilar algo nuevo, actualizaremos esta página y cambiaremos la fecha
+de vigencia de arriba antes de publicar esa versión de la app.</p>
+
+<h2>Contacto</h2>
+<p>Correo: <a href="mailto:boneloomstudio@gmail.com">boneloomstudio@gmail.com</a></p>
+
+</main>
+</body>
+</html>
