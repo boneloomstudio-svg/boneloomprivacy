@@ -33,7 +33,7 @@
 
 <h1><span>Boneloom</span> Privacy Policy</h1>
 <p class="meta">App: Boneloom for Android (package <code>com.boneloom.app</code>)<br>
-Effective date: 30 September 2026</p>
+Effective date: 7 October 2026</p>
 
 <div class="box">
   <strong>The short version.</strong> Your drawings and projects stay on your phone. Boneloom has
@@ -41,6 +41,9 @@ Effective date: 30 September 2026</p>
   see which parts of the app are used, the app automatically sends us technical information
   through Google's Firebase Crashlytics and Firebase Analytics. If you subscribe, Google Play takes
   the payment and RevenueCat checks the purchase so premium can be unlocked; we never see your card.
+  If you agree to it when the app first asks, Boneloom also sends anonymous information about how
+  your skeletons are built (their shape and some numbers, never your artwork) so that skeletons that
+  move badly can be found and fixed; you can say no, and change your mind at any time in Settings.
   We don't sell any of this or share it with anyone else.
 </div>
 
@@ -52,7 +55,9 @@ In this policy, "we" and "us" mean the developer of Boneloom. You can reach us a
 <h2>Your drawings and projects stay on your device</h2>
 <p>Everything you make in Boneloom, including drawings, layers, frames, skeletons, animations,
 colours and settings, is stored only on your phone, inside the app's private storage. We never
-receive it, and it is never uploaded to us.</p>
+receive your drawings or projects, and they are never uploaded to us. The only thing that can
+leave your phone about a skeleton is described under
+<a href="#rig-diagnostics">Anonymous rig diagnostics</a>, and only if you agree to it.</p>
 <ul>
   <li><strong>Importing a picture:</strong> Boneloom uses Android's photo picker. The app only
     sees the one image you choose, and that image stays on your device.</li>
@@ -77,7 +82,36 @@ Analytics</strong>. They collect the following automatically while you use the a
   <tr><td>Device identifiers</td><td>A random ID that Firebase creates for this installation of the app.</td><td>To tell one installation's reports apart from another's.</td></tr>
 </table>
 <p>This information <strong>does not include</strong> your name, email address, contacts,
-precise location, photos, or anything you draw. It is not used to identify you personally.</p>
+precise location, photos, or anything you draw. It is not used to identify you personally.
+(That is about Firebase. Rig diagnostics, below, are separate and only happen if you agree.)</p>
+
+<h2 id="rig-diagnostics">Anonymous rig diagnostics (only if you agree)</h2>
+<p>The first time you open Boneloom, it asks whether you agree to send anonymous information about
+how skeletons are built. If you choose <strong>Decline</strong>, nothing described here is ever
+collected, stored or sent. You can change your answer at any time in <strong>Settings</strong>;
+turning it off also deletes anything that was still waiting on your phone to be sent.</p>
+<p>If you choose <strong>Accept</strong>, then when you leave the skeleton screen, the app checks how
+that skeleton moves: whether a bone pulls on parts it should not, whether the mesh tears, whether
+the head was found. It sends a report when something looks wrong, and about one in five of the
+skeletons that look fine, so we also know what good looks like. The same unchanged skeleton is
+never sent twice, and a phone sends at most 20 reports a day. A report contains:</p>
+<table>
+  <tr><th>What</th><th>Details</th></tr>
+  <tr><td>Numbers about the skeleton</td><td>How many bones and mesh points, and measurements of how the drawing moves when each bone turns.</td></tr>
+  <tr><td>The skeleton itself</td><td>Where the bones are, the mesh points, and which bones hold them.</td></tr>
+  <tr><td>A coarse outline</td><td>A black-and-white silhouette of the drawing, at most 160 squares across, with no colour and no detail.</td></tr>
+  <tr><td>What was done on the skeleton screen</td><td>Counts only: for example how many bones were added or deleted, undos after automatic bones, brush strokes, exports, and how long the screen was open.</td></tr>
+  <tr><td>Sizes and versions</td><td>The canvas size, the app's version and Android's version.</td></tr>
+</table>
+<p>It <strong>never sends</strong> your drawing, its colours or pixels, anything you typed (names of
+drawings, skeletons or bones), your account, a device or advertising ID, or your location.</p>
+<p>Reports are not linked to you, so they cannot be traced back to you. This also means we cannot
+find and delete one person's reports on request; saying no, or turning it off in Settings, stops
+anything further being sent. To stop anyone flooding the service, the server briefly keeps a
+scrambled (hashed) form of the network address a report came from, apart from the reports, and
+deletes it after about a day.</p>
+<p>It is used only to find and fix skeletons that move badly. It is stored by
+<strong>Supabase</strong>, a database service acting on our behalf, and is never sold or shared.</p>
 
 <h2>Subscriptions and purchases</h2>
 <p>Boneloom is free to download. Premium is an optional subscription (monthly, or yearly with a
@@ -110,12 +144,14 @@ Boneloom, and you can delete those lines before sending.</p>
   <li><strong>No advertising ID.</strong> The app does not collect or use your device's
     advertising ID, and ad personalisation is turned off.</li>
   <li><strong>No selling or sharing.</strong> We do not sell your information or share it with
-    third parties. Google (Crashlytics, Analytics and Google Play billing) and RevenueCat
-    (subscriptions) work for us as service providers and handle this information on our behalf.</li>
+    third parties. Google (Crashlytics, Analytics and Google Play billing), RevenueCat
+    (subscriptions) and Supabase (rig diagnostics, only if you agree) work for us as service
+    providers and handle this information on our behalf.</li>
 </ul>
 
 <h2>Security</h2>
-<p>Everything sent to Firebase and RevenueCat is <strong>encrypted in transit</strong> (HTTPS). Your drawings and
+<p>Everything sent to Firebase, RevenueCat and Supabase is <strong>encrypted in transit</strong> (HTTPS),
+and Supabase also stores it encrypted. Your drawings and
 projects are kept in the app's private storage, which other apps on your phone cannot read.</p>
 
 <h2>How long it is kept</h2>
@@ -123,12 +159,18 @@ projects are kept in the app's private storage, which other apps on your phone c
 according to Firebase Analytics' retention setting and is then deleted automatically.
 Purchase records are kept by RevenueCat and Google for as long as a subscription needs them and
 as long as tax and accounting rules require.
+Rig diagnostics are kept for 12 months and then deleted automatically, and all of them are deleted
+when the feature is retired; the scrambled network addresses used against flooding are deleted
+after about a day.
 Your drawings stay on your phone until you delete them or uninstall the app.</p>
 
 <h2>Your choices</h2>
 <ul>
   <li><strong>Uninstalling Boneloom</strong> stops all collection and removes the app's data from
     your phone, including your drawings. Export anything you want to keep first.</li>
+  <li><strong>Rig diagnostics:</strong> turn <strong>Help fix skeletons</strong> on or off in the
+    app's Settings at any time. Off, nothing more is sent, and anything still waiting on your
+    phone is deleted.</li>
   <li><strong>Clearing the app's storage</strong> in Android's settings resets the app's random
     ID, which also removes your drawings.</li>
   <li><strong>Questions or requests</strong> about your information: email us at the address above
